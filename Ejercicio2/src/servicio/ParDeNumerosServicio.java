@@ -8,14 +8,15 @@ import entidad.ParDeNumeros;
  */
 public class ParDeNumerosServicio {
 //    Método mostrarValores que muestra cuáles son los dos números guardados.
+//ParDeNumeros n1 = new ParDeNumeros();
 
-    public void mostrarValores(ParDeNumeros numeros) {
+    private static void mostrarValores(ParDeNumeros numeros) {
         System.out.println("El numero 1 es: " + numeros.getNum1());
         System.out.println("El numero 2 es: " + numeros.getNum2());
     }
 
 //    Método devolverMayor para retornar cuál de los dos atributos tiene el mayor valor
-    public double devolverMayor(ParDeNumeros numeros) {
+    private static double devolverMayor(ParDeNumeros numeros) {
 
         if (numeros.getNum1() < numeros.getNum2())
         {
@@ -26,7 +27,7 @@ public class ParDeNumerosServicio {
         }
     }
 
-    public double devolverMenor(ParDeNumeros numeros) {
+    private static double devolverMenor(ParDeNumeros numeros) {
         if (numeros.getNum1() > numeros.getNum2())
         {
             return numeros.getNum2();
@@ -43,7 +44,7 @@ public class ParDeNumerosServicio {
 //        } else {
 //            menor = Math.round((numeros.getNum1() * 100) / 100); }
 
-    public void calcularPotencia(ParDeNumeros numeros) {
+    private static void calcularPotencia(ParDeNumeros numeros) {
         double mayor = Math.round((devolverMayor(numeros) * 100) / 100);
         double menor = Math.round((devolverMenor(numeros) * 100) / 100);
 
@@ -56,10 +57,24 @@ public class ParDeNumerosServicio {
 // Método calculaRaiz, para calcular la raíz cuadrada del menor de los dos valores. Antes de calcular la raíz 
 // cuadrada se debe obtener el valor absoluto del número.
 
-    public void calcularRaiz(ParDeNumeros numeros) {
+    private static void calcularRaiz(ParDeNumeros numeros) {
         System.out.println("La raiz es : ");
         System.out.println(Math.sqrt(devolverMenor(numeros)));
 
     }
 
+    public static void calculos(ParDeNumeros numeros) {
+//    numeros.
+        System.out.println("Mostrar ambos numeros generados aleatoriamente: ");
+        ParDeNumerosServicio.mostrarValores(numeros);
+        System.out.println("-----------");
+        System.out.println("Devuelve el numero mayor: ");
+        System.out.println(ParDeNumerosServicio.devolverMayor(numeros));
+        System.out.println("-----------");
+        System.out.println("Calcula la potencia del mayor elevado al menor (REDONDEADO): ");
+        ParDeNumerosServicio.calcularPotencia(numeros);
+        System.out.println("-----------");
+        System.out.println("Calcula la raiz del menor: ");
+        ParDeNumerosServicio.calcularRaiz(numeros);
+    }
 }

@@ -12,6 +12,10 @@ package entidad;
  */
 public class ParDeNumeros {
 
+    public static void mostrarValores(ParDeNumeros numeros) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     private double num1;
     private double num2;
 
