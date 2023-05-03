@@ -19,6 +19,6 @@ public class mainArreglos {
         arreGlos.ordenarA(A);
         arreGlos.inicializarB(A, B);
         arreGlos.mostarA(A);
-        arreGlos.inicializarA(B);
+        arreGlos.mostarA(B);
     }
 }
