@@ -13,8 +13,7 @@ public class MesServicio {
     public static void iniciarJuego(Mes mes) {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         System.out.println(mes.getMesSecreto());
-        System.out.println("Adivine el mes secreto. "
-                + "\nIntroduzca el nombre del mes: ");
+        System.out.println("Adivine el mes secreto. " + "\nIntroduzca el nombre del mes: ");
         String mesIntroducido = null;
 
         do {
